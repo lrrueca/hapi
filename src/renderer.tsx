@@ -14,6 +14,11 @@ export const renderer = jsxRenderer(({ title, children }) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="icon"
+          type="image/svg+xml; charset=utf-8"
+          href="/Selecta_2003.svg"
+        />
         {import.meta.env.PROD ? (
           <Link rel="stylesheet" href="/assets/lib.css" />
         ) : (
