@@ -1,8 +1,10 @@
 import distributorRouter from "@/routes/distributor/dashboard.js";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
+import { serveStatic } from "@hono/node-server/serve-static";
 
 const app = new Hono<HonoEnv>();
+app.use("/static/*", serveStatic({ root: "./public" }));
 app.use("*", renderer);
 
 app.get("/", async (c) => {
