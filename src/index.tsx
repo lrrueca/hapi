@@ -1,4 +1,5 @@
 import distributorRouter from "@/routes/distributor/dashboard.js";
+import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
 import { serveStatic } from "@hono/node-server/serve-static";
