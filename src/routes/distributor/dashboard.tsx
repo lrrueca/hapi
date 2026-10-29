@@ -8,7 +8,7 @@ distributorRouter.get("/dashboard", (c) => {
     <Layout>
       <div>Dashboard page coming soon...</div>
     </Layout>,
-    { title: "Distributor Dashboard" },
+    { title: "Dashboard" },
   );
 });
 
