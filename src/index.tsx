@@ -1,4 +1,5 @@
 import distributorRouter from "@/routes/distributor/dashboard.js";
+import accountsRouter from "@/routes/distributor/accounts.js";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
@@ -50,5 +51,6 @@ app.get("/", async (c) => {
 });
 
 app.route("/distributor", distributorRouter);
+app.route("/distributor", accountsRouter);
 
 export default app;

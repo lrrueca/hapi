@@ -53,7 +53,7 @@ export const Layout: FC = ({ children }) => {
                 class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
                 data-tip="Accounts"
               >
-                <Icon icon="ph:user-square-thin" />
+                <Icon icon="ph:address-book-thin" />
                 <span class="is-drawer-close:hidden">Accounts</span>
               </a>
             </li>
@@ -63,7 +63,7 @@ export const Layout: FC = ({ children }) => {
                 class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
                 data-tip="Users"
               >
-                <Icon icon="ph:user-thin" />
+                <Icon icon="ph:users-three-thin" />
                 <span class="is-drawer-close:hidden">Users</span>
               </a>
             </li>
@@ -115,6 +115,36 @@ export const Layout: FC = ({ children }) => {
               >
                 <Icon icon="ph:calendar-dot-thin" />
                 <span class="is-drawer-close:hidden">Subject For Pullout</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/distributor/products"
+                class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Products"
+              >
+                <Icon icon="ph:ice-cream-thin" />
+                <span class="is-drawer-close:hidden">Products</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/distributor/orders"
+                class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Orders"
+              >
+                <Icon icon="ph:receipt-thin" />
+                <span class="is-drawer-close:hidden">Orders</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/distributor/bad-orders"
+                class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Bad Orders"
+              >
+                <Icon icon="ph:receipt-x-thin" />
+                <span class="is-drawer-close:hidden">Bad Orders</span>
               </a>
             </li>
           </ul>
