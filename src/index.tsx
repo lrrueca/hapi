@@ -3,10 +3,16 @@ import accountsRouter from "@/routes/distributor/accounts.js";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
+import { NotFoundPage } from "./routes/NotFoundPage.js";
 
 const app = new Hono<HonoEnv>();
 app.use("/static/*", serveStatic({ root: "./public" }));
 app.use("*", renderer);
+
+app.notFound((c) => {
+  c.status(404);
+  return c.render(<NotFoundPage />, { title: "Not Found" });
+});
 
 app.get("/", async (c) => {
   return c.render(
