@@ -36,7 +36,7 @@ const DrawerSide: FC = () => {
       />
 
       {/* Sidebar content here */}
-      <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
+      <div class="flex min-h-full flex-col items-start bg-base-100 is-drawer-close:w-14 is-drawer-open:w-64">
         <ul class="menu w-full grow relative">
           <li class="flex flex-row lg:hidden">
             <label
@@ -97,7 +97,7 @@ const Main: FC = ({ children }) => {
       />
       <div class="drawer-content">
         {/* Navbar */}
-        <nav class="navbar w-full bg-base-300">
+        <nav class="navbar w-full bg-base-100">
           <label
             for="drawer-dashboard"
             aria-label="open sidebar"
@@ -111,7 +111,7 @@ const Main: FC = ({ children }) => {
         </nav>
 
         {/* Page content here */}
-        <div class="p-4">{children}</div>
+        <div class="p-4 bg-gray-50">{children}</div>
       </div>
       <DrawerSide />
     </>
