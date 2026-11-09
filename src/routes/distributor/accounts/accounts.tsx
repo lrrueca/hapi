@@ -537,7 +537,7 @@ const TableLG: FC = () => {
       {/* table display on tablet, laptop and desktop devices */}
       <div class="overflow-x-auto hidden lg:flex flex-col gap-8">
         {/* first data row */}
-        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-gray-50">
+        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-base-100">
           <div>
             <div class="text-sm font-semibold text-gray-400">
               01M650R0AFEHY4P24XCWQWEB9R
@@ -553,7 +553,7 @@ const TableLG: FC = () => {
               Penthouse Suite Level, Philippines
             </div>
           </div>
-          <div class="p-4 py-2 bg-gray-100">
+          <div class="p-4 py-2 bg-gray-50">
             <div>
               <div class="text-sm text-gray-500">Phone</div>
               <div>966 469 1760</div>
@@ -582,7 +582,7 @@ const TableLG: FC = () => {
         </div>
 
         {/* second data row */}
-        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-gray-50">
+        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-base-100">
           <div>
             <div class="text-sm font-semibold text-gray-400">
               01a1b9a5-282a-7a91-8957-1ec6f7da8074
@@ -598,7 +598,7 @@ const TableLG: FC = () => {
               Penthouse Suite Level, Philippines
             </div>
           </div>
-          <div class="p-4 py-2 bg-gray-100">
+          <div class="p-4 py-2 bg-gray-50">
             <div>
               <div class="text-sm text-gray-500">Phone</div>
               <div>966 469 1760</div>
@@ -627,7 +627,7 @@ const TableLG: FC = () => {
         </div>
 
         {/* third data row */}
-        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-gray-50">
+        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-base-100">
           <div>
             <div class="text-sm font-semibold text-gray-400">
               01a1b9a5-0287-7033-b3bd-de74050a0fdc
@@ -643,7 +643,7 @@ const TableLG: FC = () => {
               Penthouse Suite Level, Philippines
             </div>
           </div>
-          <div class="p-4 py-2 bg-gray-100">
+          <div class="p-4 py-2 bg-gray-50">
             <div>
               <div class="text-sm text-gray-400">Phone</div>
               <div>966 469 1760</div>
@@ -672,7 +672,7 @@ const TableLG: FC = () => {
         </div>
 
         {/* fourth data row */}
-        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-gray-50">
+        <div class="p-4 grid grid-cols-[2fr_1fr] gap-4 leading-8 border border-gray-200 rounded bg-base-100">
           <div>
             <div class="text-sm font-semibold text-gray-400">
               01a1b9a5-0287-7033-b3bd-de74050a0fdc
@@ -688,7 +688,7 @@ const TableLG: FC = () => {
               Penthouse Suite Level, Philippines
             </div>
           </div>
-          <div class="p-4 py-2 bg-gray-100">
+          <div class="p-4 py-2 bg-gray-50">
             <div>
               <div class="text-sm text-gray-400">Phone</div>
               <div>966 469 1760</div>
@@ -737,7 +737,7 @@ accountsRouter.get("/", (c) => {
   return c.render(
     <>
       <Layout>
-        <div class="grid grid-rows-[1fr_1fr_15fr_100px] gap-4">
+        <div class="min-h-[calc(100vh-96px)] grid grid-rows-[50px_50px_1fr_100px] gap-4">
           <Header />
           <Toolbar />
 
