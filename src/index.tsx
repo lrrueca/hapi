@@ -1,5 +1,6 @@
 import dashboardRouter from "@/routes/distributor/dashboard/dashboard.js";
 import accountsRouter from "@/routes/distributor/accounts/accounts.js";
+import userRouter from "@/routes/distributor/users/users.js";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
@@ -58,5 +59,6 @@ app.get("/", async (c) => {
 
 app.route("/distributor/dashboard", dashboardRouter);
 app.route("/distributor/accounts", accountsRouter);
+app.route("/distributor/users", userRouter);
 
 export default app;
