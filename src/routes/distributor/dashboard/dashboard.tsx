@@ -1,9 +1,9 @@
 import { Hono } from "hono";
-import { Layout } from "./layout.js";
+import { Layout } from "../layout.js";
 
-const distributorRouter = new Hono();
+const dashboardRouter = new Hono();
 
-distributorRouter.get("/dashboard", (c) => {
+dashboardRouter.get("/", (c) => {
   return c.render(
     <Layout>
       <div>Dashboard page coming soon...</div>
@@ -12,4 +12,4 @@ distributorRouter.get("/dashboard", (c) => {
   );
 });
 
-export default distributorRouter;
+export default dashboardRouter;
