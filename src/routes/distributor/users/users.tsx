@@ -495,21 +495,19 @@ userRouter.get("/", (c) => {
   return c.render(
     <>
       <Layout>
-        <div class="min-h-[calc(100vh-96px)] grid grid-rows-[50px_50px_1fr_100px] gap-4">
-          <Header />
-          <Toolbar />
+        <Header />
+        <Toolbar />
 
-          <div class="flex flex-col gap-4">
-            {mockUsers.map((user, index) => (
-              <>
-                <UserItemSM key={index} user={user} />
-                <UserItemMD key={index} user={user} />
-              </>
-            ))}
-          </div>
-
-          <Pagination />
+        <div class="flex flex-col gap-4">
+          {mockUsers.map((user, index) => (
+            <>
+              <UserItemSM key={index} user={user} />
+              <UserItemMD key={index} user={user} />
+            </>
+          ))}
         </div>
+
+        <Pagination />
       </Layout>
 
       {/* drawers */}
