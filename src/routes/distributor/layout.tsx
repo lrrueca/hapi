@@ -111,7 +111,9 @@ const Main: FC = ({ children }) => {
         </nav>
 
         {/* Page content here */}
-        <div class="p-4 bg-gray-50">{children}</div>
+        <div class="p-4 bg-gray-50 min-h-[calc(100vh-64px)] grid grid-rows-[50px_50px_1fr_100px] gap-4">
+          {children}
+        </div>
       </div>
       <DrawerSide />
     </>
