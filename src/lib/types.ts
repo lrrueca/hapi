@@ -10,6 +10,19 @@ export interface Account {
     sapCode: string;
 }
 
+export interface User {
+    id: string;
+    role: string;
+    active: boolean;
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    addressLine1: string;
+    addressLine2: string;
+    phone: string;
+    username: string;
+}
+
 export interface Freezer {
     id: string;
     model: string;
