@@ -3,6 +3,7 @@ import accountsRouter from "@/routes/distributor/accounts/accounts.js";
 import userRouter from "@/routes/distributor/users/users.js";
 import freezerRouter from "./routes/distributor/freezers/freezers.js";
 import deploymentRouter from "./routes/distributor/deployments/deployments.js";
+import cabconCodeRouter from "./routes/distributor/cabconCode/cabconCode.js";
 
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
@@ -65,5 +66,6 @@ app.route("/distributor/accounts", accountsRouter);
 app.route("/distributor/users", userRouter);
 app.route("/distributor/freezers", freezerRouter);
 app.route("/distributor/deployments", deploymentRouter);
+app.route("/distributor/cabcon/code", cabconCodeRouter);
 
 export default app;
