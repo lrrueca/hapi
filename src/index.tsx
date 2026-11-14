@@ -2,6 +2,8 @@ import dashboardRouter from "@/routes/distributor/dashboard/dashboard.js";
 import accountsRouter from "@/routes/distributor/accounts/accounts.js";
 import userRouter from "@/routes/distributor/users/users.js";
 import freezerRouter from "./routes/distributor/freezers/freezers.js";
+import deploymentRouter from "./routes/distributor/deployments/deployments.js";
+
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
@@ -62,5 +64,6 @@ app.route("/distributor/dashboard", dashboardRouter);
 app.route("/distributor/accounts", accountsRouter);
 app.route("/distributor/users", userRouter);
 app.route("/distributor/freezers", freezerRouter);
+app.route("/distributor/deployments", deploymentRouter);
 
 export default app;
