@@ -58,7 +58,7 @@ const DrawerSide: FC = () => {
           <Li href="/distributor/freezers" content="Freezers">
             <Icon icon="ph:browser-thin" />
           </Li>
-          <Li href="/distributor/cabcon" content="Cabcon">
+          <Li href="/distributor/cabcon/code" content="Cabcon Code">
             <Icon icon="ph:barcode-thin" />
           </Li>
           <Li href="/distributor/deployments" content="Deployments">
