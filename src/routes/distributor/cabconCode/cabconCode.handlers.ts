@@ -1,5 +1,5 @@
 import type { CabconCode } from "./cabconCode.types.js";
-const baseUrl = "http://localhost:3001/api";
+const baseUrl = process.env.MOCK_API_URL;
 
 export const getAllAsync = async (): Promise<CabconCode[]> => {
     try {
