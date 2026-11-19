@@ -1,0 +1,398 @@
+import { Icon } from "@/components/Icon.js";
+import type { Account } from "@/lib/types.js";
+import type { FC } from "hono/jsx";
+import _ from "lodash";
+
+export const AccountAddForm: FC = () => {
+  return (
+    <div class="drawer drawer-end">
+      <input
+        id="drawer-add-account-form"
+        type="checkbox"
+        class="drawer-toggle"
+      />
+      <div class="drawer-side">
+        <label
+          for="drawer-add-account-form"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        />
+        <div class="menu bg-base-200 min-h-full w-80 p-4 relative">
+          <div class="w-min absolute right-0">
+            <label
+              for="drawer-add-account-form"
+              class="btn btn-ghost hover:[background:none] hover:[border:none] hover:[outline:none] hover:[box-shadow:none]"
+            >
+              <Icon icon="ph:x-thin" />
+            </label>
+          </div>
+
+          <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 mt-10">
+            <legend class="fieldset-legend">Add Account</legend>
+
+            <label for="account-type" class="label">
+              Account Type
+            </label>
+            <select id="account-type" class="select">
+              <option disabled selected>
+                Select Account Type
+              </option>
+              <option value="dealer">Dealer</option>
+              <option value="hapistore">Hapistore</option>
+              <option value="direct-store">Direct Store</option>
+            </select>
+
+            <label for="account-name" class="label">
+              Account Name
+            </label>
+            <input
+              id="account-name"
+              type="text"
+              class="input"
+              placeholder="Name"
+              required
+            />
+
+            <label for="address-line-1" class="label">
+              Address Line 1
+            </label>
+            <input
+              id="address-line-1"
+              type="text"
+              class="input"
+              placeholder="Address Line 1"
+              required
+            />
+
+            <label for="address-line-2" class="label">
+              Address Line 2
+            </label>
+            <input
+              id="address-line-2"
+              type="text"
+              class="input"
+              placeholder="Town, City, Province, Region"
+              required
+            />
+
+            <label for="phone-no" class="label">
+              Phone No.
+            </label>
+            <input
+              id="phone-no"
+              type="tel"
+              class="input"
+              placeholder="Phone no."
+              required
+            />
+
+            <label for="sap-code" class="label">
+              SAP Code
+            </label>
+            <input
+              id="sap-code"
+              type="text"
+              class="input"
+              placeholder="SAP Code"
+              required
+            />
+
+            <label for="isr-code" class="label">
+              ISR Code
+            </label>
+            <input
+              id="isr-code"
+              type="text"
+              class="input"
+              placeholder="ISR Code"
+              required
+            />
+
+            <button class="btn btn-neutral mt-4">Submit</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const AccountEditItem: FC<{ item: Account }> = ({ item }) => {
+  return (
+    <div class="drawer drawer-end">
+      <input
+        id="drawer-edit-account-form"
+        type="checkbox"
+        class="drawer-toggle"
+      />
+
+      <div class="drawer-side">
+        <label
+          for="drawer-edit-account-form"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        />
+
+        <div class="menu bg-base-200 min-h-full w-80 p-4 relative">
+          <div class="w-min absolute right-0">
+            <label
+              for="drawer-edit-account-form"
+              class="btn btn-ghost hover:[background:none] hover:[border:none] hover:[outline:none] hover:[box-shadow:none]"
+            >
+              <Icon icon="ph:x-thin" />
+            </label>
+          </div>
+
+          <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 mt-10">
+            <legend class="fieldset-legend">Add Account</legend>
+
+            <label for="account-type" class="label">
+              Account Type
+            </label>
+            <select id="account-type" class="select">
+              <option disabled selected>
+                {item.type}
+              </option>
+              <option value="dealer">Dealer</option>
+              <option value="hapistore">Hapistore</option>
+            </select>
+
+            <label for="account-name" class="label">
+              Account Name
+            </label>
+            <input
+              id="account-name"
+              type="text"
+              class="input"
+              placeholder="Name"
+              value={item.name}
+              required
+            />
+
+            <label for="address-line-1" class="label">
+              Address Line 1
+            </label>
+            <input
+              id="address-line-1"
+              type="text"
+              class="input"
+              placeholder="Address Line 1"
+              value={item.addressLine1}
+              required
+            />
+
+            <label for="address-line-2" class="label">
+              Address Line 2
+            </label>
+            <input
+              id="address-line-2"
+              type="text"
+              class="input"
+              placeholder="Town, City, Province, Region"
+              value={item.addressLine2}
+              required
+            />
+
+            <label for="phone-no" class="label">
+              Phone No.
+            </label>
+            <input
+              id="phone-no"
+              type="tel"
+              class="input"
+              placeholder="Phone no."
+              value={item.phone}
+              required
+            />
+
+            <label for="sap-code" class="label">
+              SAP Code
+            </label>
+            <input
+              id="sap-code"
+              type="text"
+              class="input"
+              placeholder="SAP Code"
+              value={item.sapCode}
+              required
+            />
+
+            <label for="isr-code" class="label">
+              ISR Code
+            </label>
+            <input
+              id="isr-code"
+              type="text"
+              class="input"
+              placeholder="ISR Code"
+              value={item.sapCode}
+              required
+            />
+
+            <span class="label">Status</span>
+            <label class="label">
+              <input type="checkbox" checked={item.isActive} class="toggle" />
+              Remember me
+            </label>
+
+            <button class="btn btn-neutral mt-4">Submit</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const AccountToolbar: FC = () => {
+  const header = "Accounts Management";
+  return (
+    <>
+      <div class="place-self-center justify-self-end flex flex-row gap-2">
+        {/* search */}
+        <label class="btn btn-sm btn-outline rounded-full">
+          <button onclick="top_drawer.showModal()">
+            <Icon icon="ph:sliders-horizontal-thin" />
+          </button>
+        </label>
+
+        {/* search modal */}
+        <dialog id="top_drawer" class="modal modal-top">
+          <div class="modal-box w-[clamp(320px,100%,600px)] max-w-none mx-auto rounded-b-box flex flex-col gap-4">
+            <div class="modal-action mt-0">
+              <form method="dialog">
+                <button class="btn btn-sm btn-ghost">
+                  <Icon icon="ph:x-thin" />
+                </button>
+              </form>
+            </div>
+
+            <form action="" class="flex flex-col gap-4">
+              {/* search */}
+              <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4">
+                <legend class="fieldset-legend">Search</legend>
+                <label class="input w-full mx-auto">
+                  <Icon icon="ph:magnifying-glass-thin" />
+                  <input
+                    type="search"
+                    required
+                    placeholder="Search"
+                    autofocus
+                  />
+                </label>
+                <span class="text-xs">
+                  Search by Account ID, Name or Address
+                </span>
+              </fieldset>
+
+              {/* account type */}
+              <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 flex flex-col gap-4">
+                <legend class="fieldset-legend">Filter</legend>
+                <select class="select select-bordered w-full">
+                  <legend class="fieldset-legend">Filter</legend>
+                  <option disabled selected>
+                    Select Account Type
+                  </option>
+                  <option value="dealer">Dealer</option>
+                  <option value="hapistore">Hapistore</option>
+                  <option value="direct-store">Direct Store</option>
+                </select>
+
+                <label class="label cursor-pointer gap-2">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="label-text text-sm text-gray-800">
+                    Is Active
+                  </span>
+                </label>
+              </fieldset>
+
+              <div class="mt-4 flex justify-end gap-2">
+                <button
+                  type="button"
+                  class="btn btn-ghost"
+                  onclick="top_drawer.close()"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-neutral">
+                  Apply
+                </button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+
+        {/* add account button */}
+        <label
+          for="drawer-add-account-form"
+          class="btn btn-neutral btn-sm rounded-full"
+        >
+          <Icon icon="ph:user-circle-plus-thin" />
+        </label>
+      </div>
+
+      {/* modal top - search */}
+    </>
+  );
+};
+
+export const AccountItem: FC<{ item: Account }> = ({ item }) => {
+  return (
+    <li class="grid grid-cols-1 md:grid-cols-2 grid-rows-[1ft_1ft_30px] md:grid-rows-[1fr_50px] gap-2 border-gray-200 rounded bg-base-100 p-4">
+      {/* box-1 */}
+      <div class="col-1 row-1 flex flex-col gap-2 p-4 ">
+        <span class="text-xs md:text-sm">{`ID: ${item.id}`}</span>
+        <span class="text-lg lg:text-2xl font-bold">{item.name}</span>
+        <span class="text-xs border-t border-gray-200">Account Type:</span>
+        <span>{_.startCase(item.type)}</span>
+        <span class="text-xs border-t border-gray-200">Address:</span>
+        <span class="text-balance">{item.addressLine1}</span>
+        <span class="text-balance">{item.addressLine2}</span>
+      </div>
+
+      {/* box-2 */}
+      <div class="col-1 md:col-2 md:row-1 flex flex-col gap-2 p-4 bg-gray-100 text-xs md:text-base">
+        <span class="text-xs">Status:</span>
+        <span>{item.isActive ? "Active" : "Idle"}</span>
+        <span class="text-xs">Phone:</span>
+        <span>{item.phone}</span>
+        <span class="text-xs border-t border-gray-200">SAP Code:</span>
+        <span>{item.isrCode}</span>
+        <span class="text-xs border-t border-gray-200">ISR Code:</span>
+        <span>{item.sapCode}</span>
+        <span class="text-xs border-t border-gray-200">Enlisted Date:</span>
+        <span>{item.createdAt}</span>
+      </div>
+
+      {/* box-3 */}
+      <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
+        <label for={`cabcon-code-edit-form-${item.id}`}>
+          <Icon icon="ph:note-pencil-thin" />
+        </label>
+        <button>
+          <Icon icon="ph:eraser-thin" />
+        </button>
+      </div>
+    </li>
+  );
+};
+
+export const AccountList: FC<{ items: Account[] }> = ({ items }) => {
+  return (
+    <ul class="grid grid-cols-1 gap-4">
+      {items.map((item) => (
+        <AccountItem item={item} />
+      ))}
+    </ul>
+  );
+};
+
+export const Pagination: FC = () => {
+  return (
+    <div class="place-self-center flex justify-center">
+      <div class="join">
+        <button class="join-item btn">«</button>
+        <button class="join-item btn">Page 22</button>
+        <button class="join-item btn">»</button>
+      </div>
+    </div>
+  );
+};

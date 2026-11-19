@@ -7,3 +7,9 @@
 @theme {
   --font-sans: "Poppins", sans-serif;
 }
+
+@layer base {
+  body {
+    @apply text-gray-500;
+  }
+}
