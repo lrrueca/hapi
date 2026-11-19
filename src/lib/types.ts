@@ -1,13 +1,18 @@
 export interface Account {
     id: string;
     type: string;
-    active: boolean;
+    isActive: boolean;
     parentId: string;
+    distributorId: string;
     name: string;
-    address: string;
+    addressLine1: string;
+    addressLine2: string;
     phone: string;
     isrCode: string;
     sapCode: string;
+    createdAt: string;
+    updatedAt: string;
+    deletedAt: string;
 }
 
 export interface User {
