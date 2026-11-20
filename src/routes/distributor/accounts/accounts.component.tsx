@@ -120,122 +120,122 @@ export const AccountEditItem: FC<{ item: Account }> = ({ item }) => {
   return (
     <div class="drawer drawer-end">
       <input
-        id="drawer-edit-account-form"
+        id={`account-edit-form-${item.id}`}
         type="checkbox"
         class="drawer-toggle"
       />
-
       <div class="drawer-side">
         <label
-          for="drawer-edit-account-form"
+          for={`account-edit-form-${item.id}`}
           aria-label="close sidebar"
           class="drawer-overlay"
         />
+        <div class="menu bg-base-200 min-h-full w-80 p-4 flex flex-col gap-2">
+          <label for={`account-edit-form-${item.id}`} class="ml-auto">
+            <Icon icon="ph:x-thin" />
+          </label>
+          <form>
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4">
+              <legend class="fieldset-legend text-gray-500">
+                Edit Account Details
+              </legend>
 
-        <div class="menu bg-base-200 min-h-full w-80 p-4 relative">
-          <div class="w-min absolute right-0">
-            <label
-              for="drawer-edit-account-form"
-              class="btn btn-ghost hover:[background:none] hover:[border:none] hover:[outline:none] hover:[box-shadow:none]"
-            >
-              <Icon icon="ph:x-thin" />
-            </label>
-          </div>
+              <label for="account-type" class="label">
+                Account Type
+              </label>
+              <select id="account-type" class="select">
+                <option disabled selected>
+                  {_.startCase(item.type)}
+                </option>
+                <option value="dealer">Dealer</option>
+                <option value="hapistore">Hapistore</option>
+                <option value="direct-store">Direct Store</option>
+              </select>
 
-          <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 mt-10">
-            <legend class="fieldset-legend">Add Account</legend>
+              <label for="account-name" class="label">
+                Account Name
+              </label>
+              <input
+                id="account-name"
+                type="text"
+                class="input"
+                placeholder="Name"
+                value={item.name}
+                required
+              />
 
-            <label for="account-type" class="label">
-              Account Type
-            </label>
-            <select id="account-type" class="select">
-              <option disabled selected>
-                {item.type}
-              </option>
-              <option value="dealer">Dealer</option>
-              <option value="hapistore">Hapistore</option>
-            </select>
+              <label for="address-line-1" class="label">
+                Address Line 1
+              </label>
+              <input
+                id="address-line-1"
+                type="text"
+                class="input"
+                placeholder="Address Line 1"
+                value={item.addressLine1}
+                required
+              />
 
-            <label for="account-name" class="label">
-              Account Name
-            </label>
-            <input
-              id="account-name"
-              type="text"
-              class="input"
-              placeholder="Name"
-              value={item.name}
-              required
-            />
+              <label for="address-line-2" class="label">
+                Address Line 2
+              </label>
+              <input
+                id="address-line-2"
+                type="text"
+                class="input"
+                placeholder="Town, City, Province, Region"
+                value={item.addressLine2}
+                required
+              />
 
-            <label for="address-line-1" class="label">
-              Address Line 1
-            </label>
-            <input
-              id="address-line-1"
-              type="text"
-              class="input"
-              placeholder="Address Line 1"
-              value={item.addressLine1}
-              required
-            />
+              <label for="phone-no" class="label">
+                Phone No.
+              </label>
+              <input
+                id="phone-no"
+                type="tel"
+                class="input"
+                placeholder="Phone no."
+                value={item.phone}
+                required
+              />
 
-            <label for="address-line-2" class="label">
-              Address Line 2
-            </label>
-            <input
-              id="address-line-2"
-              type="text"
-              class="input"
-              placeholder="Town, City, Province, Region"
-              value={item.addressLine2}
-              required
-            />
+              <label for="sap-code" class="label">
+                SAP Code
+              </label>
+              <input
+                id="sap-code"
+                type="text"
+                class="input"
+                placeholder="SAP Code"
+                value={item.sapCode}
+                required
+              />
 
-            <label for="phone-no" class="label">
-              Phone No.
-            </label>
-            <input
-              id="phone-no"
-              type="tel"
-              class="input"
-              placeholder="Phone no."
-              value={item.phone}
-              required
-            />
+              <label for="isr-code" class="label">
+                ISR Code
+              </label>
+              <input
+                id="isr-code"
+                type="text"
+                class="input"
+                placeholder="ISR Code"
+                value={item.isrCode}
+                required
+              />
 
-            <label for="sap-code" class="label">
-              SAP Code
-            </label>
-            <input
-              id="sap-code"
-              type="text"
-              class="input"
-              placeholder="SAP Code"
-              value={item.sapCode}
-              required
-            />
+              <label class="label cursor-pointer mt-2">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  checked={item.isActive}
+                />
+                <span class="label-text text-sm text-gray-500">Is Active</span>
+              </label>
 
-            <label for="isr-code" class="label">
-              ISR Code
-            </label>
-            <input
-              id="isr-code"
-              type="text"
-              class="input"
-              placeholder="ISR Code"
-              value={item.sapCode}
-              required
-            />
-
-            <span class="label">Status</span>
-            <label class="label">
-              <input type="checkbox" checked={item.isActive} class="toggle" />
-              Remember me
-            </label>
-
-            <button class="btn btn-neutral mt-4">Submit</button>
-          </fieldset>
+              <button class="btn btn-neutral mt-4">Submit</button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
@@ -328,50 +328,96 @@ export const AccountToolbar: FC = () => {
           <Icon icon="ph:user-circle-plus-thin" />
         </label>
       </div>
-
-      {/* modal top - search */}
     </>
   );
 };
 
 export const AccountItem: FC<{ item: Account }> = ({ item }) => {
   return (
-    <li class="grid grid-cols-1 md:grid-cols-2 grid-rows-[1ft_1ft_30px] md:grid-rows-[1fr_50px] gap-2 border-gray-200 rounded bg-base-100 p-4">
-      {/* box-1 */}
-      <div class="col-1 row-1 flex flex-col gap-2 p-4 ">
-        <span class="text-xs md:text-sm">{`ID: ${item.id}`}</span>
-        <span class="text-lg lg:text-2xl font-bold">{item.name}</span>
-        <span class="text-xs border-t border-gray-200">Account Type:</span>
-        <span>{_.startCase(item.type)}</span>
-        <span class="text-xs border-t border-gray-200">Address:</span>
-        <span class="text-balance">{item.addressLine1}</span>
-        <span class="text-balance">{item.addressLine2}</span>
-      </div>
+    <>
+      <li class="grid grid-cols-1 md:grid-cols-2 grid-rows-[1ft_1ft_30px] md:grid-rows-[1fr_50px] gap-2 border-gray-200 rounded bg-base-100 p-4">
+        {/* box-1 */}
+        <div class="col-1 row-1 flex flex-col gap-2 px-4">
+          <span class="text-xs md:text-sm">{`ID: ${item.id}`}</span>
+          <span class="text-lg lg:text-2xl font-bold">{item.name}</span>
+          <span class="text-xs border-t border-gray-200">Account Type:</span>
+          <span class="text-sm font-semibold">{_.startCase(item.type)}</span>
+          <span class="text-xs border-t border-gray-200">Address:</span>
+          <span class="text-sm text-balance font-semibold">
+            {item.addressLine1}
+          </span>
+          <span class="text-sm text-balance font-semibold">
+            {item.addressLine2}
+          </span>
+          <span class="text-xs border-t border-gray-200 md:hidden">Phone:</span>
+          <span class="text-sm font-semibold text-balance md:hidden">
+            {item.phone}
+          </span>
+          <span class="text-xs border-t border-gray-200 md:hidden">
+            Status:
+          </span>
+          <span class="text-sm text-balance font-semibold md:hidden">
+            {item.isActive ? "Active" : "Idle"}
+          </span>
+        </div>
 
-      {/* box-2 */}
-      <div class="col-1 md:col-2 md:row-1 flex flex-col gap-2 p-4 bg-gray-100 text-xs md:text-base">
-        <span class="text-xs">Status:</span>
-        <span>{item.isActive ? "Active" : "Idle"}</span>
-        <span class="text-xs">Phone:</span>
-        <span>{item.phone}</span>
-        <span class="text-xs border-t border-gray-200">SAP Code:</span>
-        <span>{item.isrCode}</span>
-        <span class="text-xs border-t border-gray-200">ISR Code:</span>
-        <span>{item.sapCode}</span>
-        <span class="text-xs border-t border-gray-200">Enlisted Date:</span>
-        <span>{item.createdAt}</span>
-      </div>
+        {/* box-2 - small devices */}
+        <div class="md:hidden collapse bg-base-100">
+          <input type="checkbox" />
+          <div class="collapse-title p-0 px-4 flex flex-row items-center">
+            <Icon icon="ph:dots-three-bold" />
+          </div>
+          <div class="collapse-content p-0">
+            <div class="flex flex-col gap-2 p-4 bg-gray-100 text-xs">
+              <span class="text-xs">SAP Code:</span>
+              <span class="text-sm font-semibold">{item.isrCode}</span>
+              <span class="text-xs border-t border-gray-200">ISR Code:</span>
+              <span class="text-sm font-semibold">{item.sapCode}</span>
+              <span class="text-xs border-t border-gray-200">
+                Enlisted Date:
+              </span>
+              <span class="text-sm font-semibold">{item.createdAt}</span>
+            </div>
+          </div>
+        </div>
 
-      {/* box-3 */}
-      <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
-        <label for={`cabcon-code-edit-form-${item.id}`}>
-          <Icon icon="ph:note-pencil-thin" />
-        </label>
-        <button>
-          <Icon icon="ph:eraser-thin" />
-        </button>
-      </div>
-    </li>
+        {/* box-2 - medium to large devices */}
+        <div class="hidden col-1 md:col-2 md:row-1 md:flex flex-col gap-2 p-4 bg-gray-100 text-xs md:text-base">
+          <span class="text-xs hidden md:block">Status:</span>
+          <span class="text-sm text-balance font-semibold hidden md:block">
+            {item.isActive ? "Active" : "Idle"}
+          </span>
+          <span class="text-xs border-t border-gray-200 hidden md:block">
+            Phone:
+          </span>
+          <span class="text-sm font-semibold text-balance hidden md:block">
+            {item.phone}
+          </span>
+          <span class="text-xs border-t border-gray-200">SAP Code:</span>
+          <span class="text-sm font-semibold">{item.isrCode}</span>
+          <span class="text-xs border-t border-gray-200">ISR Code:</span>
+          <span class="text-sm font-semibold">{item.sapCode}</span>
+          <span class="text-xs border-t border-gray-200">Enlisted Date:</span>
+          <span class="text-sm font-semibold">{item.createdAt}</span>
+        </div>
+
+        {/* box-3 */}
+        <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
+          <div class="tooltip" data-tip="Edit">
+            <label for={`account-edit-form-${item.id}`}>
+              <Icon icon="ph:note-pencil-thin" />
+            </label>
+          </div>
+
+          <button class="tooltip" data-tip="Delete">
+            <Icon icon="ph:eraser-thin" />
+          </button>
+        </div>
+      </li>
+
+      {/* account edit form drawer component */}
+      <AccountEditItem item={item} />
+    </>
   );
 };
 
