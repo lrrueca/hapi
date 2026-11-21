@@ -3,6 +3,12 @@ import type { Account } from "@/lib/types.js";
 import type { FC } from "hono/jsx";
 import _ from "lodash";
 
+const accountType = [
+  { dealer: "Dealer" },
+  { hapistore: "Hapistore" },
+  { "direct-store": "Direct" },
+];
+
 export const AccountAddForm: FC = () => {
   return (
     <div class="drawer drawer-end">
@@ -37,9 +43,13 @@ export const AccountAddForm: FC = () => {
               <option disabled selected>
                 Select Account Type
               </option>
-              <option value="dealer">Dealer</option>
-              <option value="hapistore">Hapistore</option>
-              <option value="direct-store">Direct Store</option>
+              {accountType.map((at, idx) =>
+                Object.entries(at).map(([key, value]) => (
+                  <option key={`${idx}-${key}`} value={key}>
+                    {value}
+                  </option>
+                )),
+              )}
             </select>
 
             <label for="account-name" class="label">
@@ -147,9 +157,13 @@ export const AccountEditItem: FC<{ item: Account }> = ({ item }) => {
                 <option disabled selected>
                   {_.startCase(item.type)}
                 </option>
-                <option value="dealer">Dealer</option>
-                <option value="hapistore">Hapistore</option>
-                <option value="direct-store">Direct Store</option>
+                {accountType.map((at, idx) =>
+                  Object.entries(at).map(([key, value]) => (
+                    <option key={`${idx}-${key}`} value={key}>
+                      {value}
+                    </option>
+                  )),
+                )}
               </select>
 
               <label for="account-name" class="label">
@@ -294,9 +308,13 @@ export const AccountToolbar: FC = () => {
                   <option disabled selected>
                     Select Account Type
                   </option>
-                  <option value="dealer">Dealer</option>
-                  <option value="hapistore">Hapistore</option>
-                  <option value="direct-store">Direct Store</option>
+                  {accountType.map((at, idx) =>
+                    Object.entries(at).map(([key, value]) => (
+                      <option key={`${idx}-${key}`} value={key}>
+                        {value}
+                      </option>
+                    )),
+                  )}
                 </select>
 
                 <label class="label cursor-pointer gap-2">
