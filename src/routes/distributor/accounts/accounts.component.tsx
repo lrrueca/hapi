@@ -272,6 +272,7 @@ export const AccountToolbar: FC = () => {
                 <label class="input w-full mx-auto">
                   <Icon icon="ph:magnifying-glass-thin" />
                   <input
+                    id="search-account"
                     type="search"
                     required
                     placeholder="Search"
