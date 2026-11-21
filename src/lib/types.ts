@@ -17,15 +17,20 @@ export interface Account {
 
 export interface User {
     id: string;
-    role: string;
-    active: boolean;
     firstName: string;
     middleName: string;
     lastName: string;
     addressLine1: string;
     addressLine2: string;
     phone: string;
+    role: string;
+    isActive: boolean;
     username: string;
+    accountName: string;
+    accountType: string;
+    createdAt: string;
+    updatedAt: string;
+    deletedAt: string;
 }
 
 export interface Freezer {
