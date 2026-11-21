@@ -384,9 +384,20 @@ export const AccountItem: FC<{ item: Account }> = ({ item }) => {
 
         {/* box-2 - small devices */}
         <div class="md:hidden collapse bg-base-100">
-          <input type="checkbox" />
-          <div class="collapse-title p-0 px-4 flex flex-row items-center">
-            <Icon icon="ph:dots-three-bold" />
+          <input type="checkbox" class="peer" />
+          <div class="collapse-title p-0 px-4 mb-4 flex flex-row items-center btn btn-outline w-full border-gray-500 text-gray-500 peer-checked:[&_.icon-open]:hidden peer-checked:[&_.icon-close]:block">
+            <span class="icon-open">
+              <span class="flex flex-row items-center gap-1">
+                <Icon icon="ph:arrow-line-down-thin" width="16" />
+                <span class="text-sm">More</span>
+              </span>
+            </span>
+            <span class="icon-close hidden">
+              <span class="flex flex-row items-center gap-1">
+                <Icon icon="ph:arrow-line-up-thin" width="16" />
+                <span class="text-sm">Less</span>
+              </span>
+            </span>
           </div>
           <div class="collapse-content p-0">
             <div class="flex flex-col gap-2 p-4 bg-gray-100 text-xs">
