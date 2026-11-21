@@ -286,8 +286,10 @@ export const AccountToolbar: FC = () => {
               {/* account type */}
               <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 flex flex-col gap-4">
                 <legend class="fieldset-legend">Filter</legend>
-                <select class="select select-bordered w-full">
-                  <legend class="fieldset-legend">Filter</legend>
+                <select
+                  id="select-account-type"
+                  class="select select-bordered w-full"
+                >
                   <option disabled selected>
                     Select Account Type
                   </option>
