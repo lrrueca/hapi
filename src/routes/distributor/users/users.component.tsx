@@ -323,8 +323,10 @@ export const UserToolbar: FC = () => {
               {/* user role */}
               <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 flex flex-col gap-4">
                 <legend class="fieldset-legend">Filter</legend>
-                <select class="select select-bordered w-full">
-                  <legend class="fieldset-legend">Filter</legend>
+                <select
+                  id="select-user-role"
+                  class="select select-bordered w-full"
+                >
                   <option disabled selected>
                     Select User Role
                   </option>
