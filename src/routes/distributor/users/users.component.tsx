@@ -281,7 +281,6 @@ export const UserEditItem: FC<{ item: User }> = ({ item }) => {
 };
 
 export const UserToolbar: FC = () => {
-  const header = "Accounts Management";
   return (
     <>
       <div class="px-4 place-self-center justify-self-end flex flex-row gap-2">
@@ -368,7 +367,7 @@ export const UserToolbar: FC = () => {
           for="drawer-add-user-form"
           class="btn btn-neutral btn-sm rounded-full"
         >
-          <Icon icon="ph:user-circle-plus" />
+          <Icon icon="ph:user-plus" />
         </label>
       </div>
     </>
