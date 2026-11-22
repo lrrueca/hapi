@@ -30,7 +30,7 @@ export const AccountAddForm: FC = () => {
               for="drawer-add-account-form"
               class="btn btn-ghost hover:[background:none] hover:[border:none] hover:[outline:none] hover:[box-shadow:none]"
             >
-              <Icon icon="ph:x-thin" />
+              <Icon icon="ph:x" />
             </label>
           </div>
 
@@ -143,7 +143,7 @@ export const AccountEditItem: FC<{ item: Account }> = ({ item }) => {
         />
         <div class="menu bg-base-200 min-h-full w-80 p-4 flex flex-col gap-2">
           <label for={`account-edit-form-${item.id}`} class="ml-auto">
-            <Icon icon="ph:x-thin" />
+            <Icon icon="ph:x" />
           </label>
           <form>
             <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4">
@@ -265,7 +265,7 @@ export const AccountToolbar: FC = () => {
         {/* search */}
         <label class="btn btn-sm btn-outline rounded-full">
           <button onclick="top_drawer.showModal()">
-            <Icon icon="ph:sliders-horizontal-thin" />
+            <Icon icon="ph:sliders-horizontal" />
           </button>
         </label>
 
@@ -275,7 +275,7 @@ export const AccountToolbar: FC = () => {
             <div class="modal-action mt-0">
               <form method="dialog">
                 <button class="btn btn-sm btn-ghost">
-                  <Icon icon="ph:x-thin" />
+                  <Icon icon="ph:x" />
                 </button>
               </form>
             </div>
@@ -285,7 +285,7 @@ export const AccountToolbar: FC = () => {
               <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4">
                 <legend class="fieldset-legend">Search</legend>
                 <label class="input w-full mx-auto">
-                  <Icon icon="ph:magnifying-glass-thin" />
+                  <Icon icon="ph:magnifying-glass" />
                   <input
                     id="search-account"
                     type="search"
@@ -347,7 +347,7 @@ export const AccountToolbar: FC = () => {
           for="drawer-add-account-form"
           class="btn btn-neutral btn-sm rounded-full"
         >
-          <Icon icon="ph:user-circle-plus-thin" />
+          <Icon icon="ph:user-circle-plus" />
         </label>
       </div>
     </>
@@ -389,13 +389,13 @@ export const AccountItem: FC<{ item: Account }> = ({ item }) => {
           <div class="collapse-title p-0 px-4 mb-4 flex flex-row items-center btn btn-outline w-full border-gray-500 text-gray-500 peer-checked:[&_.icon-open]:hidden peer-checked:[&_.icon-close]:block">
             <span class="icon-open">
               <span class="flex flex-row items-center gap-1">
-                <Icon icon="ph:arrow-line-down-thin" width="16" />
+                <Icon icon="ph:arrow-line-down" width="16" />
                 <span class="text-sm">More</span>
               </span>
             </span>
             <span class="icon-close hidden">
               <span class="flex flex-row items-center gap-1">
-                <Icon icon="ph:arrow-line-up-thin" width="16" />
+                <Icon icon="ph:arrow-line-up" width="16" />
                 <span class="text-sm">Less</span>
               </span>
             </span>
@@ -441,16 +441,16 @@ export const AccountItem: FC<{ item: Account }> = ({ item }) => {
             data-tip="Users"
             href={`/distributor/accounts/users/${item.id}`}
           >
-            <Icon icon="ph:users-thin" />
+            <Icon icon="ph:users" />
           </a>
           <div class="tooltip" data-tip="Edit">
             <label for={`account-edit-form-${item.id}`}>
-              <Icon icon="ph:note-pencil-thin" />
+              <Icon icon="ph:note-pencil" />
             </label>
           </div>
 
           <button class="tooltip" data-tip="Delete">
-            <Icon icon="ph:eraser-thin" />
+            <Icon icon="ph:eraser" />
           </button>
         </div>
       </li>
@@ -488,13 +488,13 @@ export const AccountUserItem: FC<{ item: User }> = ({ item }) => {
           <div class="collapse-title p-0 px-4 mb-4 flex flex-row items-center btn btn-outline w-full border-gray-500 text-gray-500 peer-checked:[&_.icon-open]:hidden peer-checked:[&_.icon-close]:block">
             <span class="icon-open">
               <span class="flex flex-row items-center gap-1">
-                <Icon icon="ph:arrow-line-down-thin" width="16" />
+                <Icon icon="ph:arrow-line-down" width="16" />
                 <span class="text-sm">More</span>
               </span>
             </span>
             <span class="icon-close hidden">
               <span class="flex flex-row items-center gap-1">
-                <Icon icon="ph:arrow-line-up-thin" width="16" />
+                <Icon icon="ph:arrow-line-up" width="16" />
                 <span class="text-sm">Less</span>
               </span>
             </span>
@@ -554,12 +554,12 @@ export const AccountUserItem: FC<{ item: User }> = ({ item }) => {
         <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
           <div class="tooltip" data-tip="Edit">
             <label for={`user-edit-form-${item.id}`}>
-              <Icon icon="ph:note-pencil-thin" />
+              <Icon icon="ph:note-pencil" />
             </label>
           </div>
 
           <button class="tooltip" data-tip="Delete">
-            <Icon icon="ph:eraser-thin" />
+            <Icon icon="ph:eraser" />
           </button>
         </div>
       </li>
@@ -584,7 +584,7 @@ export const AccountUserToolbar: FC<{ userCount: number }> = ({
         for="drawer-add-user-form"
         class="btn btn-neutral btn-sm rounded-full"
       >
-        <Icon icon="ph:user-plus-thin" />
+        <Icon icon="ph:user-plus" />
       </label>
     </div>
   );
