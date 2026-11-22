@@ -42,6 +42,9 @@ export interface Freezer {
     yearModel: number;
     barcode: string;
     distributorId: string;
+    createdAt: string;
+    updatedAt: string;
+    deletedAt: string;
 }
 
 export interface Deployment {
