@@ -1,5 +1,6 @@
 import { Icon } from "@/components/Icon.js";
-import type { Account } from "@/lib/types.js";
+import type { Account, User } from "@/lib/types.js";
+import { UserEditItem } from "@routes/distributor/users/users.component.js";
 import type { FC } from "hono/jsx";
 import _ from "lodash";
 
@@ -260,7 +261,7 @@ export const AccountToolbar: FC = () => {
   const header = "Accounts Management";
   return (
     <>
-      <div class="place-self-center justify-self-end flex flex-row gap-2">
+      <div class="px-4 place-self-center justify-self-end flex flex-row gap-2">
         {/* search */}
         <label class="btn btn-sm btn-outline rounded-full">
           <button onclick="top_drawer.showModal()">
@@ -435,6 +436,13 @@ export const AccountItem: FC<{ item: Account }> = ({ item }) => {
 
         {/* box-3 */}
         <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
+          <a
+            class="tooltip"
+            data-tip="Users"
+            href={`/distributor/accounts/users/${item.id}`}
+          >
+            <Icon icon="ph:users-thin" />
+          </a>
           <div class="tooltip" data-tip="Edit">
             <label for={`account-edit-form-${item.id}`}>
               <Icon icon="ph:note-pencil-thin" />
@@ -458,6 +466,135 @@ export const AccountList: FC<{ items: Account[] }> = ({ items }) => {
     <ul class="grid grid-cols-1 gap-4">
       {items.map((item) => (
         <AccountItem item={item} />
+      ))}
+    </ul>
+  );
+};
+
+export const AccountUserItem: FC<{ item: User }> = ({ item }) => {
+  return (
+    <>
+      <li class="grid grid-cols-1 md:grid-cols-2 grid-rows-[1ft_1ft_30px] md:grid-rows-[1fr_50px] gap-2 border-gray-200 rounded bg-base-100 p-4">
+        {/* box-1 */}
+        <div class="col-1 row-1 flex flex-col gap-2 px-4">
+          <span class="text-xs md:text-sm">{`ID: ${item.id}`}</span>
+          <span class="text-lg lg:text-2xl font-bold">{`${item.firstName} ${item.middleName} ${item.lastName}`}</span>
+          <span class="text-sm font-semibold">{_.startCase(item.role)}</span>
+        </div>
+
+        {/* box-2 */}
+        <div class="md:hidden collapse bg-base-100">
+          <input type="checkbox" class="peer" />
+          <div class="collapse-title p-0 px-4 mb-4 flex flex-row items-center btn btn-outline w-full border-gray-500 text-gray-500 peer-checked:[&_.icon-open]:hidden peer-checked:[&_.icon-close]:block">
+            <span class="icon-open">
+              <span class="flex flex-row items-center gap-1">
+                <Icon icon="ph:arrow-line-down-thin" width="16" />
+                <span class="text-sm">More</span>
+              </span>
+            </span>
+            <span class="icon-close hidden">
+              <span class="flex flex-row items-center gap-1">
+                <Icon icon="ph:arrow-line-up-thin" width="16" />
+                <span class="text-sm">Less</span>
+              </span>
+            </span>
+          </div>
+          <div class="collapse-content p-0">
+            <div class="flex flex-col gap-2 p-4 bg-gray-100 text-xs">
+              <span class="text-xs">Status:</span>
+              <span class="text-sm font-semibold">
+                {item.isActive ? "Active" : "Idle"}
+              </span>
+
+              <span class="text-xs">Address:</span>
+              <span class="text-sm text-balance font-semibold">
+                {item.addressLine1}
+              </span>
+              <span class="text-sm text-balance font-semibold">
+                {item.addressLine2}
+              </span>
+
+              <span class="text-xs">Phone:</span>
+              <span class="text-sm font-semibold">{item.phone}</span>
+
+              <span class="text-xs border-t border-gray-200">
+                Enlisted Date:
+              </span>
+              <span class="text-sm font-semibold">{item.createdAt}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* box-2 - medium to large devices */}
+        <div class="hidden col-1 md:col-2 md:row-1 md:flex flex-col gap-2 p-4 bg-gray-100 text-xs md:text-base">
+          <span class="text-xs hidden md:block">Status:</span>
+          <span class="text-sm text-balance font-semibold hidden md:block">
+            {item.isActive ? "Active" : "Idle"}
+          </span>
+
+          <span class="text-xs">Address:</span>
+          <span class="text-sm text-balance font-semibold">
+            {item.addressLine1}
+          </span>
+          <span class="text-sm text-balance font-semibold">
+            {item.addressLine2}
+          </span>
+
+          <span class="text-xs border-t border-gray-200 hidden md:block">
+            Phone:
+          </span>
+          <span class="text-sm font-semibold text-balance hidden md:block">
+            {item.phone}
+          </span>
+          <span class="text-xs border-t border-gray-200">Enlisted Date:</span>
+          <span class="text-sm font-semibold">{item.createdAt}</span>
+        </div>
+
+        {/* box-3 */}
+        <div class="col-span-full row-3 md:row-2 flex flex-row gap-2 items-center border-t border-gray-200 p-4">
+          <div class="tooltip" data-tip="Edit">
+            <label for={`user-edit-form-${item.id}`}>
+              <Icon icon="ph:note-pencil-thin" />
+            </label>
+          </div>
+
+          <button class="tooltip" data-tip="Delete">
+            <Icon icon="ph:eraser-thin" />
+          </button>
+        </div>
+      </li>
+      <UserEditItem item={item} />
+    </>
+  );
+};
+
+export const AccountUserToolbar: FC<{ userCount: number }> = ({
+  userCount,
+}) => {
+  return (
+    <div class="px-4 flex flex-row items-center gap-2">
+      <div>{`Users: ${userCount}`}</div>
+      <a
+        class="ml-auto btn btn-sm btn-outline rounded-full border-gray-500 text-gray-500"
+        href="/distributor/accounts"
+      >
+        Back
+      </a>
+      <label
+        for="drawer-add-user-form"
+        class="btn btn-neutral btn-sm rounded-full"
+      >
+        <Icon icon="ph:user-plus-thin" />
+      </label>
+    </div>
+  );
+};
+
+export const AccountUserList: FC<{ items: User[] }> = ({ items }) => {
+  return (
+    <ul class="flex flex-col gap-4">
+      {items.slice(0, 3).map((item) => (
+        <AccountUserItem item={item} />
       ))}
     </ul>
   );
