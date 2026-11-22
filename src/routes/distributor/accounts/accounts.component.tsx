@@ -258,7 +258,6 @@ export const AccountEditItem: FC<{ item: Account }> = ({ item }) => {
 };
 
 export const AccountToolbar: FC = () => {
-  const header = "Accounts Management";
   return (
     <>
       <div class="px-4 place-self-center justify-self-end flex flex-row gap-2">
