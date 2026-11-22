@@ -101,10 +101,17 @@ const Main: FC = ({ children }) => {
           <label
             for="drawer-dashboard"
             aria-label="open sidebar"
-            class="btn btn-square btn-ghost drawer-button"
+            class="drawer-button swap"
           >
             {/* Sidebar toggle icon */}
-            <Icon icon="ph:sidebar-simple-thin" />
+            <span class="swap-off [:checked~*_&]:opacity-0">
+              <Icon icon="ph:sidebar-simple" />
+            </span>
+
+            {/* 2. Icon shown when drawer is OPEN */}
+            <span class="swap-on [:checked~*_&]:opacity-100">
+              <Icon icon="ph:sidebar-fill" />
+            </span>
           </label>
           {/* app logo */}
           <AppLogo href="/distributor/dashboard" />
