@@ -19,7 +19,7 @@ accountsRouter.get("/", async (c) => {
   return c.render(
     <>
       <Layout>
-        <DashboardHeader header="Account Management" />
+        <DashboardHeader header="Account Management" icon="ph:address-book" />
         <AccountToolbar />
         <AccountList items={data} />
         <Pagination />
@@ -37,7 +37,7 @@ accountsRouter.get("/users/:id", async (c) => {
   return c.render(
     <>
       <Layout>
-        <DashboardHeader header="Lorem Dealer Users" />
+        <DashboardHeader header="Lorem Dealer Users" icon="ph:users" />
         <AccountUserToolbar userCount={data.length} />
         <AccountUserList items={data} />
       </Layout>
