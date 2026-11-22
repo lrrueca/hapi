@@ -1,13 +1,16 @@
 import { DashboardHeader } from "@/components/DashboardHeader.js";
+import { UserAddForm } from "@routes/distributor/users/users.component.js";
 import { Hono } from "hono";
 import { Layout } from "../layout.js";
 import {
   AccountAddForm,
   AccountList,
   AccountToolbar,
+  AccountUserList,
+  AccountUserToolbar,
   Pagination,
 } from "./accounts.component.js";
-import { getAllAsync } from "./accounts.handler.js";
+import { getAccountUsersAsync, getAllAsync } from "./accounts.handler.js";
 
 const accountsRouter = new Hono();
 
@@ -26,6 +29,22 @@ accountsRouter.get("/", async (c) => {
       <AccountAddForm />
     </>,
     { title: "Accounts" },
+  );
+});
+
+accountsRouter.get("/users/:id", async (c) => {
+  const data = await getAccountUsersAsync();
+  return c.render(
+    <>
+      <Layout>
+        <DashboardHeader header="Lorem Dealer Users" />
+        <AccountUserToolbar userCount={data.length} />
+        <AccountUserList items={data} />
+      </Layout>
+      {/* drawer components */}
+      <UserAddForm />
+    </>,
+    { title: "Account Users" },
   );
 });
 
