@@ -284,7 +284,7 @@ export const UserToolbar: FC = () => {
   const header = "Accounts Management";
   return (
     <>
-      <div class="place-self-center justify-self-end flex flex-row gap-2">
+      <div class="px-4 place-self-center justify-self-end flex flex-row gap-2">
         {/* search */}
         <label class="btn btn-sm btn-outline rounded-full">
           <button onclick="top_drawer.showModal()">
