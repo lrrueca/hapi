@@ -1,5 +1,12 @@
 import { Icon } from "@/components/Icon.js";
 import type { FC } from "hono/jsx";
+import { useRequestContext } from "hono/jsx-renderer";
+
+interface Nav {
+  href: string;
+  label: string;
+  icon: string;
+}
 
 // components
 const AppLogo: FC = ({ href }) => {
@@ -12,21 +19,72 @@ const AppLogo: FC = ({ href }) => {
     </a>
   );
 };
-const Li: FC = ({ href, content, children }) => {
+
+const NavItem: FC<{ item: Nav }> = ({ item }) => {
+  const c = useRequestContext();
+  const currentPath = c.req.path;
+  const isActive =
+    item.href === "/distributor/dashboard"
+      ? currentPath === item.href
+      : currentPath.startsWith(item.href);
+
   return (
     <li>
       <a
-        href={href}
-        class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
-        data-tip={content}
+        href={item.href}
+        class={`is-drawer-close:tooltip is-drawer-close:tooltip-right ${isActive ? "menu-active" : ""}`}
+        data-tip={item.label}
       >
-        {children}
-        <span class="is-drawer-close:hidden">{content}</span>
+        <Icon icon={item.icon} />
+        <span class="is-drawer-close:hidden">{item.label}</span>
       </a>
     </li>
   );
 };
+
 const DrawerSide: FC = () => {
+  const navItems: Nav[] = [
+    {
+      href: "/distributor/dashboard",
+      label: "Dashboard",
+      icon: "ph:squares-four",
+    },
+    {
+      href: "/distributor/accounts",
+      label: "Accounts",
+      icon: "ph:address-book",
+    },
+    { href: "/distributor/users", label: "Users", icon: "ph:users-three" },
+    { href: "/distributor/freezers", label: "Freezers", icon: "ph:browser" },
+    {
+      href: "/distributor/cabcon/code",
+      label: "Cabcon Code",
+      icon: "ph:barcode",
+    },
+    {
+      href: "/distributor/deployments",
+      label: "Deployments",
+      icon: "ph:calendar-blank",
+    },
+    {
+      href: "/distributor/pullout",
+      label: "Pullout",
+      icon: "ph:calendar-minus",
+    },
+    {
+      href: "/distributor/subject-for-pullout",
+      label: "Subject For Pullout",
+      icon: "ph:calendar-dot",
+    },
+    { href: "/distributor/products", label: "Products", icon: "ph:ice-cream" },
+    { href: "/distributor/orders", label: "Orders", icon: "ph:receipt" },
+    {
+      href: "/distributor/bad-orders",
+      label: "Bad Orders",
+      icon: "ph:receipt-x",
+    },
+  ];
+
   return (
     <div class="drawer-side is-drawer-close:overflow-visible">
       <label
@@ -37,7 +95,7 @@ const DrawerSide: FC = () => {
 
       {/* Sidebar content here */}
       <div class="flex min-h-full flex-col items-start bg-base-100 is-drawer-close:w-14 is-drawer-open:w-64">
-        <ul class="menu w-full grow relative">
+        <ul class="menu w-full grow relative flex flex-col gap-4 mt-1.5">
           <li class="flex flex-row lg:hidden">
             <label
               for="drawer-dashboard"
@@ -46,47 +104,15 @@ const DrawerSide: FC = () => {
               <Icon icon="ph:x-thin" />
             </label>
           </li>
-          <Li href="/distributor/dashboard" content="Dashboard">
-            <Icon icon="ph:squares-four-thin" />
-          </Li>
-          <Li href="/distributor/accounts" content="Accounts">
-            <Icon icon="ph:address-book-thin" />
-          </Li>
-          <Li href="/distributor/users" content="Users">
-            <Icon icon="ph:users-three-thin" />
-          </Li>
-          <Li href="/distributor/freezers" content="Freezers">
-            <Icon icon="ph:browser-thin" />
-          </Li>
-          <Li href="/distributor/cabcon/code" content="Cabcon Code">
-            <Icon icon="ph:barcode-thin" />
-          </Li>
-          <Li href="/distributor/deployments" content="Deployments">
-            <Icon icon="ph:calendar-blank-thin" />
-          </Li>
-          <Li href="/distributor/pullout" content="Pullout">
-            <Icon icon="ph:calendar-minus-thin" />
-          </Li>
-          <Li
-            href="/distributor/subject-for-pullout"
-            content="Subject For Pullout"
-          >
-            <Icon icon="ph:calendar-dot-thin" />
-          </Li>
-          <Li href="/distributor/products" content="Products">
-            <Icon icon="ph:ice-cream-thin" />
-          </Li>
-          <Li href="/distributor/orders" content="Orders">
-            <Icon icon="ph:receipt-thin" />
-          </Li>
-          <Li href="/distributor/bad-orders" content="Bad Orders">
-            <Icon icon="ph:receipt-x-thin" />
-          </Li>
+          {navItems.map((item) => (
+            <NavItem item={item} />
+          ))}
         </ul>
       </div>
     </div>
   );
 };
+
 const Main: FC = ({ children }) => {
   return (
     <>
