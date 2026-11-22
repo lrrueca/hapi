@@ -16,7 +16,7 @@ userRouter.get("/", async (c) => {
   return c.render(
     <>
       <Layout>
-        <DashboardHeader header="User Management" />
+        <DashboardHeader header="User Management" icon="ph:users" />
         <UserToolbar />
         <UserList items={data} />
         <Pagination />
