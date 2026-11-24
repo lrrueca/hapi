@@ -9,7 +9,7 @@ import productRouter from "./routes/distributor/products/products.js";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
-import { NotFoundPage } from "./routes/NotFoundPage.js";
+import { NotFoundPage } from "@components/NotFoundPage.js";
 
 const app = new Hono<HonoEnv>();
 app.use("/static/*", serveStatic({ root: "./public" }));
