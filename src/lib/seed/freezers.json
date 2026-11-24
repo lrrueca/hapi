@@ -1,158 +1,410 @@
 [
   {
-    "id": "01M81E1DF3QEEZNB858PBEH66T",
-    "model": "curved sliding-glass freezer",
-    "capacity": 12,
-    "unit": "cu",
-    "brand": "haier",
-    "yearModel": 2024,
-    "barcode": "01M81E1DF3BAFXCPWEW0MGMJ9D",
-    "distributorId": "01M81E1DF3E3QP26EZY087RMYP",
-    "createdAt": "Nov-17-2027, Wed",
-    "updatedAt": "Sep-04-2026, Fri",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ2QWEXMYJF6E4S5MNZ",
+      "model": "sliding-glass freezer",
+      "capacity": 18,
+      "unit": "cu",
+      "brand": "haier",
+      "yearModel": 2018,
+      "barcode": "01M84MXEQ2BV6ZKHWSV4VKC4P8",
+      "distributorId": "01M84MXEQ2K7DZHV93V33AP1MB",
+      "createdAt": "Dec-31-2026, Thu",
+      "updatedAt": "Feb-05-2027, Fri",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ22YKA9SX6MZAZ22NC",
+      "type": "direct",
+      "isActive": false,
+      "parentId": "01M84MXEQ2CQ3EKBC25M81CZQP",
+      "distributorId": "01M84MXEQ2MFW64KVPPZ28GWTG",
+      "name": "Collier Inc",
+      "addressLine1": "14521 Water Lane Suite 733",
+      "addressLine2": "South Augusta, TX 53190, Lesotho",
+      "phone": "0197-2555-3996",
+      "isrCode": "01M84MXEQ237E2NSA9Q6BPCK9B",
+      "sapCode": "01M84MXEQ2E0F58E1K9KY652EQ",
+      "createdAt": "Jan-17-2026, Sat",
+      "updatedAt": "May-27-2027, Thu",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Aug-09-2026, Sun"
+    }
   },
   {
-    "id": "01M81E1DF3VE2J8GJ7QNYF8VX1",
-    "model": "sliding-glass freezer",
-    "capacity": 12,
-    "unit": "cu",
-    "brand": "hiron",
-    "yearModel": 2018,
-    "barcode": "01M81E1DF3PTH20Q6YJBXBFHJV",
-    "distributorId": "01M81E1DF36TMZ3BZMJGAD5MEB",
-    "createdAt": "Feb-10-2026, Tue",
-    "updatedAt": "Apr-04-2027, Sun",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ28PQJ1GS8BFPPDJB3",
+      "model": "curved sliding-glass freezer",
+      "capacity": 8,
+      "unit": "cu",
+      "brand": "aucma",
+      "yearModel": 2019,
+      "barcode": "01M84MXEQ226VT93XP96WCAEWP",
+      "distributorId": "01M84MXEQ20NECH20VYDJGEM1C",
+      "createdAt": "May-06-2027, Thu",
+      "updatedAt": "Sep-27-2027, Mon",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3XVPR9SQWMJS9ZGQX",
+      "type": "dealer",
+      "isActive": true,
+      "parentId": "01M84MXEQ38KY77FQFH8GS5XJV",
+      "distributorId": "01M84MXEQ394BFZ7YD5Q42T2HV",
+      "name": "Cruickshank - Cassin",
+      "addressLine1": "3076 W 7th Street Apt. 590",
+      "addressLine2": "Lake Desireeshire, OR 43504, Lithuania",
+      "phone": "0196-4710-8199",
+      "isrCode": "01M84MXEQ32A0HJVGH09KG3V5Y",
+      "sapCode": "01M84MXEQ3AYJ5P541648MTCR0",
+      "createdAt": "Apr-12-2026, Sun",
+      "updatedAt": "Sep-05-2027, Sun",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Sep-05-2026, Sat"
+    }
   },
   {
-    "id": "01M81E1DF3FGPTF6WPFRJ8ZFVV",
-    "model": "swing-up freezer",
-    "capacity": 8,
-    "unit": "cu",
-    "brand": "liebherr",
-    "yearModel": 2022,
-    "barcode": "01M81E1DF3VPQKK878PQ41QGD4",
-    "distributorId": "01M81E1DF3FPCFNAW16K2Z3Z0W",
-    "createdAt": "Jun-29-2026, Mon",
-    "updatedAt": "May-17-2027, Mon",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ38B2H7NGZFQE6WFW7",
+      "model": "sliding-glass freezer",
+      "capacity": 8,
+      "unit": "cu",
+      "brand": "haier",
+      "yearModel": 2018,
+      "barcode": "01M84MXEQ3DM9PEG3VJN81P4BA",
+      "distributorId": "01M84MXEQ3PD5QM2AHECWVR94A",
+      "createdAt": "Feb-26-2026, Thu",
+      "updatedAt": "Nov-20-2027, Sat",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ34MV4WGZTEKTHD61B",
+      "type": "dealer",
+      "isActive": true,
+      "parentId": "01M84MXEQ3KVK946P5A1TVGQFV",
+      "distributorId": "01M84MXEQ3QDSAX6B6542X84CP",
+      "name": "Green - Mills",
+      "addressLine1": "27455 Franco Crossroad Apt. 372",
+      "addressLine2": "Monroe, AR 35390-8404, Palestine",
+      "phone": "0196-0136-3264",
+      "isrCode": "01M84MXEQ317Y6MMVPK92YXSPD",
+      "sapCode": "01M84MXEQ3CKFV5GW0ACX9RAEC",
+      "createdAt": "Nov-07-2026, Sat",
+      "updatedAt": "Jul-26-2026, Sun",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "May-09-2027, Sun"
+    }
   },
   {
-    "id": "01M81E1DF37RR4RR8VEND0EZ7S",
-    "model": "swing-up freezer",
-    "capacity": 15,
-    "unit": "cu",
-    "brand": "haier",
-    "yearModel": 2021,
-    "barcode": "01M81E1DF3J4AMGMS31FH2TPWA",
-    "distributorId": "01M81E1DF3HRWZDA69Y5TACR68",
-    "createdAt": "Jul-29-2026, Wed",
-    "updatedAt": "Jan-07-2026, Wed",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ38A8CWX68W1RPGB01",
+      "model": "swing-up freezer",
+      "capacity": 12,
+      "unit": "cu",
+      "brand": "hiron",
+      "yearModel": 2024,
+      "barcode": "01M84MXEQ382QEW9AWV99HAA06",
+      "distributorId": "01M84MXEQ3PV93YN83Q7A1PXFP",
+      "createdAt": "Jan-01-2027, Fri",
+      "updatedAt": "Mar-11-2026, Wed",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ38K2VYZD68CRTQES3",
+      "type": "distributor",
+      "isActive": false,
+      "parentId": "01M84MXEQ38VBNE4REB0DXGNH0",
+      "distributorId": "01M84MXEQ34TY2FJEDB2MC4K9K",
+      "name": "Treutel, Brekke and D&#x27;Amore",
+      "addressLine1": "6180 Jaskolski Knoll Suite 753",
+      "addressLine2": "Lake Carissa, OR 28000-9387, Tokelau",
+      "phone": "0198-5668-6377",
+      "isrCode": "01M84MXEQ3CSEBEAMAG0C6B02T",
+      "sapCode": "01M84MXEQ36TRQWG0ZWGKJN6NQ",
+      "createdAt": "May-03-2027, Mon",
+      "updatedAt": "Dec-24-2025, Wed",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Mar-12-2027, Fri"
+    }
   },
   {
-    "id": "01M81E1DF3465JY7AVQBAS7N9T",
-    "model": "sliding-glass freezer",
-    "capacity": 18,
-    "unit": "cu",
-    "brand": "aucma",
-    "yearModel": 2020,
-    "barcode": "01M81E1DF3VEK9K04FGQGSXJ30",
-    "distributorId": "01M81E1DF33ZZ2Z6G62VASY7ZB",
-    "createdAt": "Apr-01-2026, Wed",
-    "updatedAt": "Dec-23-2025, Tue",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ3KNMBC5H6MS288ZRS",
+      "model": "swing-up freezer",
+      "capacity": 12,
+      "unit": "cu",
+      "brand": "aucma",
+      "yearModel": 2021,
+      "barcode": "01M84MXEQ3TMYFFA11K4MJNHXW",
+      "distributorId": "01M84MXEQ3Z2YS01XH1XHYTH7D",
+      "createdAt": "Mar-27-2027, Sat",
+      "updatedAt": "Jul-31-2026, Fri",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3TW0J2H9BCZ333077",
+      "type": "hapistore",
+      "isActive": false,
+      "parentId": "01M84MXEQ3MVWEW2TKDX5DKV0V",
+      "distributorId": "01M84MXEQ32Y8387K4MGMKY9RM",
+      "name": "Crooks - Beier",
+      "addressLine1": "36744 Jamie Hill Apt. 860",
+      "addressLine2": "Runolfssonport, SC 28376, Lebanon",
+      "phone": "0197-2998-0176",
+      "isrCode": "01M84MXEQ3KGFS62S0C4HAAFYS",
+      "sapCode": "01M84MXEQ359A8PNAFM8GXD211",
+      "createdAt": "Aug-27-2026, Thu",
+      "updatedAt": "Mar-25-2026, Wed",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Apr-09-2027, Fri"
+    }
   },
   {
-    "id": "01M81E1DF3383FSPAC4GC7A9HQ",
-    "model": "sliding-glass freezer",
-    "capacity": 8,
-    "unit": "cu",
-    "brand": "aucma",
-    "yearModel": 2024,
-    "barcode": "01M81E1DF3A8Y7HSG895MJY740",
-    "distributorId": "01M81E1DF3WXJ8STP69A5T6QE1",
-    "createdAt": "Feb-13-2027, Sat",
-    "updatedAt": "Mar-10-2027, Wed",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ39HTHW2HBVQY06VHR",
+      "model": "swing-up freezer",
+      "capacity": 8,
+      "unit": "cu",
+      "brand": "aucma",
+      "yearModel": 2022,
+      "barcode": "01M84MXEQ382K1DPKP8JY36PKJ",
+      "distributorId": "01M84MXEQ3M43VJNBV5VM8JE17",
+      "createdAt": "Mar-03-2026, Tue",
+      "updatedAt": "Oct-16-2026, Fri",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3KE3116FFWDR0NSC3",
+      "type": "direct",
+      "isActive": true,
+      "parentId": "01M84MXEQ3Y0DPZWX92P760F9P",
+      "distributorId": "01M84MXEQ3SBRTZKTBEB6CFQP3",
+      "name": "Thiel, Johns and Lynch",
+      "addressLine1": "78040 Konopelski Court Apt. 881",
+      "addressLine2": "Emorycester, HI 86923-6720, Cyprus",
+      "phone": "0196-9564-0021",
+      "isrCode": "01M84MXEQ30P91DCDPRWRPMR2S",
+      "sapCode": "01M84MXEQ391E5RQBT4M9ESW32",
+      "createdAt": "Nov-16-2026, Mon",
+      "updatedAt": "Jun-02-2026, Tue",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Dec-02-2025, Tue"
+    }
   },
   {
-    "id": "01M81E1DF31GVA85RKQ54YN707",
-    "model": "swing-up freezer",
-    "capacity": 18,
-    "unit": "cu",
-    "brand": "aucma",
-    "yearModel": 2018,
-    "barcode": "01M81E1DF305G8MNNQNY7SFAF6",
-    "distributorId": "01M81E1DF33WKK48RNR96JPPRK",
-    "createdAt": "Mar-07-2027, Sun",
-    "updatedAt": "Jan-03-2027, Sun",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ3VWEE7VWRDDF2TZTY",
+      "model": "sliding-glass freezer",
+      "capacity": 8,
+      "unit": "cu",
+      "brand": "hiron",
+      "yearModel": 2022,
+      "barcode": "01M84MXEQ3Y7J7HXHZZT6BV40V",
+      "distributorId": "01M84MXEQ3647KQX541FJREZRX",
+      "createdAt": "Sep-25-2027, Sat",
+      "updatedAt": "Feb-12-2026, Thu",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ36Z3ATDDW6FAAHPB9",
+      "type": "dealer",
+      "isActive": false,
+      "parentId": "01M84MXEQ3Q5P554HP45731JNM",
+      "distributorId": "01M84MXEQ3PQQSBHM0XN1RJ2VY",
+      "name": "Feest, Huel and Sanford",
+      "addressLine1": "8945 Marvin Bypass Suite 811",
+      "addressLine2": "Kilbackcester, MS 04365, Nepal",
+      "phone": "0197-0962-7228",
+      "isrCode": "01M84MXEQ30Q9E0HD0J4CDDH7Y",
+      "sapCode": "01M84MXEQ3FGMK3QKQ8Z7QVGP2",
+      "createdAt": "Mar-31-2027, Wed",
+      "updatedAt": "Mar-28-2026, Sat",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Mar-03-2026, Tue"
+    }
   },
   {
-    "id": "01M81E1DF3PK6NVP1CNCRQH8CX",
-    "model": "sliding-glass freezer",
-    "capacity": 15,
-    "unit": "cu",
-    "brand": "aucma",
-    "yearModel": 2022,
-    "barcode": "01M81E1DF31WT2G2WGRNFZPH8B",
-    "distributorId": "01M81E1DF3F2CAEYE2MM7GM59D",
-    "createdAt": "Aug-09-2026, Sun",
-    "updatedAt": "Sep-04-2027, Sat",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ3Y0983NTMXHZWR7EG",
+      "model": "swing-up freezer",
+      "capacity": 8,
+      "unit": "cu",
+      "brand": "aucma",
+      "yearModel": 2025,
+      "barcode": "01M84MXEQ3KGAECVWT1PN0C3QR",
+      "distributorId": "01M84MXEQ3VAAH4Q4FY0CBGQK5",
+      "createdAt": "Mar-14-2027, Sun",
+      "updatedAt": "Dec-25-2025, Thu",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3Q94X2BQ188JMJNBC",
+      "type": "hapistore",
+      "isActive": false,
+      "parentId": "01M84MXEQ3GKSZGDBCQ4SQ76XH",
+      "distributorId": "01M84MXEQ3SZ0WYNQR8M4R2MCJ",
+      "name": "Moen, Reinger and Harber",
+      "addressLine1": "17713 Main Street N Apt. 606",
+      "addressLine2": "Schaeferborough, NY 49487-9073, Liberia",
+      "phone": "0197-5789-5631",
+      "isrCode": "01M84MXEQ3EHFJJQF454849GJ2",
+      "sapCode": "01M84MXEQ3J0WECQ8M7ZQ672CK",
+      "createdAt": "Nov-12-2027, Fri",
+      "updatedAt": "Jul-30-2027, Fri",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Dec-04-2026, Fri"
+    }
   },
   {
-    "id": "01M81E1DF3MMYVA3ZVM7Y347AX",
-    "model": "sliding-glass freezer",
-    "capacity": 12,
-    "unit": "cu",
-    "brand": "haier",
-    "yearModel": 2024,
-    "barcode": "01M81E1DF3A5M54QMZXKNX48N1",
-    "distributorId": "01M81E1DF3TX3S7HZF8AE7FJ8M",
-    "createdAt": "Feb-20-2027, Sat",
-    "updatedAt": "Aug-14-2027, Sat",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ3QB00THNQMNP6RFE2",
+      "model": "sliding-glass freezer",
+      "capacity": 15,
+      "unit": "cu",
+      "brand": "aucma",
+      "yearModel": 2022,
+      "barcode": "01M84MXEQ342BHYRV9HRY083KV",
+      "distributorId": "01M84MXEQ33CDBPSCM93V6H44V",
+      "createdAt": "Jan-12-2026, Mon",
+      "updatedAt": "Jun-22-2026, Mon",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3153X3915G0WJ28TM",
+      "type": "dealer",
+      "isActive": false,
+      "parentId": "01M84MXEQ3W42T688ANQGR8TT2",
+      "distributorId": "01M84MXEQ3NP50RXPZQXSNEHW9",
+      "name": "Schulist and Sons",
+      "addressLine1": "906 N Pine Street Apt. 132",
+      "addressLine2": "Brownworth, SC 28009-0284, Nauru",
+      "phone": "0196-7667-0255",
+      "isrCode": "01M84MXEQ3FSWM0X98256KG28A",
+      "sapCode": "01M84MXEQ3NFR5PVPPFY37W3J2",
+      "createdAt": "Aug-10-2027, Tue",
+      "updatedAt": "Mar-25-2026, Wed",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Dec-13-2025, Sat"
+    }
   },
   {
-    "id": "01M81E1DF4X9QGFKP13YYREC1R",
-    "model": "curved sliding-glass freezer",
-    "capacity": 8,
-    "unit": "cu",
-    "brand": "haier",
-    "yearModel": 2026,
-    "barcode": "01M81E1DF4XNMYPX6D6XE2KSQH",
-    "distributorId": "01M81E1DF4GTTXE9XYQ0TBRYBP",
-    "createdAt": "Jul-07-2026, Tue",
-    "updatedAt": "Feb-07-2027, Sun",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ36NEJSJQGVWZ3101Y",
+      "model": "curved sliding-glass freezer",
+      "capacity": 12,
+      "unit": "cu",
+      "brand": "haier",
+      "yearModel": 2018,
+      "barcode": "01M84MXEQ3HJYVR3FMJPDR1DAA",
+      "distributorId": "01M84MXEQ3B6ME49J3FNVWN0T0",
+      "createdAt": "Jan-12-2027, Tue",
+      "updatedAt": "Feb-20-2026, Fri",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ37C2B5GSG6BRWM1SN",
+      "type": "distributor",
+      "isActive": true,
+      "parentId": "01M84MXEQ3YWTAQJ9V1Y5E2N5P",
+      "distributorId": "01M84MXEQ3SEXEMD5YD9Z2JDSX",
+      "name": "Witting, Beer and Miller",
+      "addressLine1": "368 Avenue Road Suite 325",
+      "addressLine2": "New Elwyn, FL 27683, Djibouti",
+      "phone": "0196-1890-9605",
+      "isrCode": "01M84MXEQ3N3Y27NDRG905S9TK",
+      "sapCode": "01M84MXEQ3FZRXA2HN5C45F12A",
+      "createdAt": "Nov-07-2026, Sat",
+      "updatedAt": "Aug-22-2026, Sat",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "May-12-2026, Tue"
+    }
   },
   {
-    "id": "01M81E1DF49HS0MV4NX2A4K8SC",
-    "model": "swing-up freezer",
-    "capacity": 15,
-    "unit": "cu",
-    "brand": "liebherr",
-    "yearModel": 2023,
-    "barcode": "01M81E1DF4R8GZ3F3SWBPJZETB",
-    "distributorId": "01M81E1DF439MBX9YNVHAWJBCV",
-    "createdAt": "Jul-25-2026, Sat",
-    "updatedAt": "Dec-02-2025, Tue",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ3SA2E50VX9WVV4EQR",
+      "model": "swing-up freezer",
+      "capacity": 15,
+      "unit": "cu",
+      "brand": "haier",
+      "yearModel": 2021,
+      "barcode": "01M84MXEQ3E22Y9EC8MDZ4M2SV",
+      "distributorId": "01M84MXEQ32Z8YYK09Z4FXDCA3",
+      "createdAt": "Nov-12-2026, Thu",
+      "updatedAt": "Jun-29-2027, Tue",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3BMTQE71FFGEP168H",
+      "type": "direct",
+      "isActive": false,
+      "parentId": "01M84MXEQ3QJ6X56BK55D71GRV",
+      "distributorId": "01M84MXEQ3JA5YNJ2SD3ZMX5NZ",
+      "name": "Howe and Sons",
+      "addressLine1": "679 Jefferson Street Apt. 927",
+      "addressLine2": "Chandler, KY 67143, Botswana",
+      "phone": "0198-7623-0244",
+      "isrCode": "01M84MXEQ310YKX2D9JH5DYSMG",
+      "sapCode": "01M84MXEQ314GGYA08BK161X34",
+      "createdAt": "Feb-08-2027, Mon",
+      "updatedAt": "Oct-27-2026, Tue",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Aug-26-2027, Thu"
+    }
   },
   {
-    "id": "01M81E1DF48W6ZDZXNCEEJSQFM",
-    "model": "swing-up freezer",
-    "capacity": 12,
-    "unit": "cu",
-    "brand": "hiron",
-    "yearModel": 2018,
-    "barcode": "01M81E1DF4TP7NB3113KH6SNC7",
-    "distributorId": "01M81E1DF4EXC7VG1V2Y51J0TF",
-    "createdAt": "Aug-18-2027, Wed",
-    "updatedAt": "May-08-2026, Fri",
-    "deletedAt": ""
+    "freezer": {
+      "id": "01M84MXEQ32ZMY46ABJTRXZH9G",
+      "model": "sliding-glass freezer",
+      "capacity": 18,
+      "unit": "cu",
+      "brand": "haier",
+      "yearModel": 2020,
+      "barcode": "01M84MXEQ370DXRM8D8P9DYXBH",
+      "distributorId": "01M84MXEQ3N0HQGJAWEGW5ZP6T",
+      "createdAt": "Feb-04-2027, Thu",
+      "updatedAt": "Jun-14-2026, Sun",
+      "deletedAt": ""
+    },
+    "account": {
+      "id": "01M84MXEQ3CS2PBEWQ6YZN67X7",
+      "type": "dealer",
+      "isActive": false,
+      "parentId": "01M84MXEQ39AF8XN4HB57SR4GJ",
+      "distributorId": "01M84MXEQ4Z4ASM640ME3TDWQ8",
+      "name": "Schmitt, Green and Mitchell",
+      "addressLine1": "5787 Pauline Lakes Suite 521",
+      "addressLine2": "Cronachester, VT 21587, Cook Islands",
+      "phone": "0196-9969-0872",
+      "isrCode": "01M84MXEQ42DMERYHJE458HVSE",
+      "sapCode": "01M84MXEQ40WE6TNZCT9Q87D41",
+      "createdAt": "Jun-02-2026, Tue",
+      "updatedAt": "Aug-10-2027, Tue",
+      "deletedAt": ""
+    },
+    "deployment": {
+      "date": "Jul-07-2026, Tue"
+    }
   }
 ]
