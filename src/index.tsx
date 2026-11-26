@@ -6,6 +6,8 @@ import deploymentRouter from "./routes/distributor/deployments/deployments.js";
 import cabconCodeRouter from "./routes/distributor/cabconCode/cabconCode.js";
 import productRouter from "./routes/distributor/products/products.js";
 
+import dealerRouter from "./routes/dealer/home.js";
+
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
@@ -69,5 +71,7 @@ app.route("/distributor/freezers", freezerRouter);
 app.route("/distributor/deployments", deploymentRouter);
 app.route("/distributor/cabcon/code", cabconCodeRouter);
 app.route("/distributor/products", productRouter);
+
+app.route("/dealer", dealerRouter);
 
 export default app;
