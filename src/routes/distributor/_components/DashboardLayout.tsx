@@ -104,7 +104,7 @@ const DrawerSide: FC = () => {
 
 export const Main: FC = ({ children }) => {
   return (
-    <>
+    <div class="drawer lg:drawer-open">
       <input
         id="drawer-dashboard"
         type="checkbox"
@@ -138,7 +138,7 @@ export const Main: FC = ({ children }) => {
         </div>
       </div>
       <DrawerSide />
-    </>
+    </div>
   );
 };
 

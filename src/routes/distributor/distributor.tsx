@@ -14,9 +14,7 @@ distributorRouter.use(
   "*",
   jsxRenderer(({ children, Layout }) => (
     <Layout>
-      <div class="drawer lg:drawer-open">
-        <Main>{children}</Main>
-      </div>
+      <Main>{children}</Main>
     </Layout>
   )),
 );
