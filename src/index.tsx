@@ -1,17 +1,10 @@
-import dashboardRouter from "@/routes/distributor/dashboard/dashboard.js";
-import accountsRouter from "@/routes/distributor/accounts/accounts.js";
-import userRouter from "@/routes/distributor/users/users.js";
-import freezerRouter from "./routes/distributor/freezers/freezers.js";
-import deploymentRouter from "./routes/distributor/deployments/deployments.js";
-import cabconCodeRouter from "./routes/distributor/cabconCode/cabconCode.js";
-import productRouter from "./routes/distributor/products/products.js";
-
-import dealerRouter from "./routes/dealer/home.js";
-
+import { NotFoundPage } from "@components/NotFoundPage.js";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { renderer } from "./renderer.js";
-import { NotFoundPage } from "@components/NotFoundPage.js";
+
+import dealerRouter from "./routes/dealer/home.js";
+import distributorRouter from "./routes/distributor/distributor.js";
 
 const app = new Hono<HonoEnv>();
 app.use("/static/*", serveStatic({ root: "./public" }));
@@ -64,14 +57,7 @@ app.get("/", async (c) => {
   );
 });
 
-app.route("/distributor/dashboard", dashboardRouter);
-app.route("/distributor/accounts", accountsRouter);
-app.route("/distributor/users", userRouter);
-app.route("/distributor/freezers", freezerRouter);
-app.route("/distributor/deployments", deploymentRouter);
-app.route("/distributor/cabcon/code", cabconCodeRouter);
-app.route("/distributor/products", productRouter);
-
+app.route("/distributor", distributorRouter);
 app.route("/dealer", dealerRouter);
 
 export default app;
