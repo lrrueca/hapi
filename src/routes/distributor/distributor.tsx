@@ -1,9 +1,9 @@
 import { Hono } from "hono";
 import { jsxRenderer } from "hono/jsx-renderer";
 
+import Main from "./_components/DashboardLayout.js";
 import accountsRouter from "./accounts/accounts.js";
 import cabconCodeRouter from "./cabconCode/cabconCode.js";
-import Main from "./components/DashboardLayout.js";
 import dashboardRouter from "./dashboard/dashboard.js";
 import deploymentRouter from "./deployments/deployments.js";
 import freezerRouter from "./freezers/freezers.js";
