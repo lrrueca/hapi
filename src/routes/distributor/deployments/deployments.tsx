@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { Layout } from "../layout.js";
 import type { FC } from "hono/jsx";
 import { Icon } from "@/components/Icon.js";
 import type { Deployment } from "@/lib/types.js";
@@ -304,16 +303,14 @@ deploymentRouter.get("/", async (c) => {
 
     return c.render(
       <>
-        <Layout>
-          <Header />
-          <Toolbar />
+        <Header />
+        <Toolbar />
 
-          <div class="flex flex-col gap-4">
-            <Data items={items} />
-          </div>
+        <div class="flex flex-col gap-4">
+          <Data items={items} />
+        </div>
 
-          <Pagination />
-        </Layout>
+        <Pagination />
 
         {/* TODO: drawer type components for filter and form */}
         {/*<DrawerFilter />*/}

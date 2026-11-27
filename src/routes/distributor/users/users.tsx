@@ -1,6 +1,5 @@
 import { DashboardHeader } from "@/components/DashboardHeader.js";
 import { Hono } from "hono";
-import { Layout } from "../layout.js";
 import {
   UserAddForm,
   UserList,
@@ -15,12 +14,10 @@ userRouter.get("/", async (c) => {
   const data = await getAllAsync();
   return c.render(
     <>
-      <Layout>
-        <DashboardHeader header="User Management" icon="ph:users" />
-        <UserToolbar />
-        <UserList items={data} />
-        <Pagination />
-      </Layout>
+      <DashboardHeader header="User Management" icon="ph:users" />
+      <UserToolbar />
+      <UserList items={data} />
+      <Pagination />
 
       {/* drawer components */}
       <UserAddForm />

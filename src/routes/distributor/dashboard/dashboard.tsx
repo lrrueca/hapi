@@ -1,15 +1,11 @@
 import { Hono } from "hono";
-import { Layout } from "../layout.js";
 
 const dashboardRouter = new Hono();
 
 dashboardRouter.get("/", (c) => {
-  return c.render(
-    <Layout>
-      <div>Dashboard page coming soon...</div>
-    </Layout>,
-    { title: "Dashboard" },
-  );
+  return c.render(<div>Dashboard page coming soon...</div>, {
+    title: "Dashboard",
+  });
 });
 
 export default dashboardRouter;

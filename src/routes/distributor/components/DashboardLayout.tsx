@@ -1,3 +1,4 @@
+import { AppLogo } from "@/components/AppLogo.js";
 import { Icon } from "@/components/Icon.js";
 import type { FC } from "hono/jsx";
 import { useRequestContext } from "hono/jsx-renderer";
@@ -7,18 +8,6 @@ interface Nav {
   label: string;
   icon: string;
 }
-
-// components
-const AppLogo: FC = ({ href }) => {
-  return (
-    <a href={href} class="px-4 flex items-center gap-2">
-      <span>
-        <img src="/Selecta_2003.svg" alt="App Logo" width="24" />
-      </span>
-      <span>Hapi</span>
-    </a>
-  );
-};
 
 const NavItem: FC<{ item: Nav }> = ({ item }) => {
   const c = useRequestContext();
@@ -113,7 +102,7 @@ const DrawerSide: FC = () => {
   );
 };
 
-const Main: FC = ({ children }) => {
+export const Main: FC = ({ children }) => {
   return (
     <>
       <input
@@ -153,11 +142,4 @@ const Main: FC = ({ children }) => {
   );
 };
 
-// layout
-export const Layout: FC = ({ children }) => {
-  return (
-    <div class="drawer lg:drawer-open">
-      <Main>{children}</Main>
-    </div>
-  );
-};
+export default Main;

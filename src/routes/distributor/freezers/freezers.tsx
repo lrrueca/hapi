@@ -1,6 +1,5 @@
 import { DashboardHeader } from "@/components/DashboardHeader.js";
 import { Hono } from "hono";
-import { Layout } from "../layout.js";
 import {
   FreezerAddForm,
   FreezerDataList,
@@ -15,16 +14,14 @@ freezerRouter.get("/", async (c) => {
   const data = await getAllAsync();
   return c.render(
     <>
-      <Layout>
-        <DashboardHeader header="Freezer Management" icon="ph:browser" />
-        <FreezerToolbar />
+      <DashboardHeader header="Freezer Management" icon="ph:browser" />
+      <FreezerToolbar />
 
-        <div class="flex flex-col gap-4">
-          <FreezerDataList items={data} />
-        </div>
+      <div class="flex flex-col gap-4">
+        <FreezerDataList items={data} />
+      </div>
 
-        <Pagination />
-      </Layout>
+      <Pagination />
 
       {/* drawers */}
       <FreezerAddForm />
